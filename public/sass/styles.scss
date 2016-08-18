@@ -1,58 +1,75 @@
+
 .org-name {
   font-weight: normal;
-  color: #333; }
+  color: #333;
+}
 
 .org-header-meta {
   font-size: 12px;
   line-height: 1.5;
-  list-style: none; }
+  list-style: none;
+}
 
 h1 {
   font-size: 32px;
-  font-weight: 600; }
+  font-weight: 600;
+}
 
 .container {
   width: 980px;
   margin-right: auto;
-  margin-left: auto; }
+  margin-left: auto;
+}
 
 .container::before {
   display: table;
-  content: ""; }
+  content: "";
+}
 
 .container::after {
   display: table;
   clear: both;
-  content: ""; }
+  content: "";
+}
 
 .page-content {
-  padding-top: 20px; }
+  padding-top: 20px;
+}
 
 .columns {
-  padding-top: 20px; }
+  padding-top: 20px;
+}
 
 .column {
   float: left;
   padding-right: 10px;
-  padding-left: 10px; }
+  padding-left: 10px;
+}
+
 
 img.octicon {
   margin-left: 28%;
   margin-top: 2%;
   height: 32px;
   width: 32px;
-  display: block; }
+  display: block;
+}
 
 .jumbotron {
-  background-color: black; }
+
+  background-color: rgb(0, 0, 0);
+
+}
 
 .jumbotron-home {
+
   height: 516px;
   background-image: url("../images/home-hero.jpg");
   background-size: cover;
   background-position: bottom left;
   background-color: #000000 !important;
-  margin: 0px; }
+  margin: 0px;
+}
 
 .jumbotron::before {
   position: absolute;
@@ -64,17 +81,23 @@ img.octicon {
   content: "";
   background-color: rgba(0, 0, 0, 0.3);
   -webkit-transition: background-color 0.2s ease-out;
-  transition: background-color 0.2s ease-out; }
+  transition: background-color 0.2s ease-out;
+}
 
 .header-table {
+
   display: inline-block;
-  padding: 20px; }
+  padding: 20px;
+}
 
 #org-avatar {
   display: inline-block;
-  width: 100px; }
+  width: 100px;
+}
 
 .home-hero, .jumbotron, .jumbotron-followup-container, .featurette, .site-header, .site-subheader, .tile .container {
   font-family: Roboto, -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", Oxygen, Ubuntu, Cantarell, "Open Sans", sans-serif;
   font-size: 16px;
-  line-height: 1.4; }
+  line-height: 1.4;
+}
+

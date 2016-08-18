@@ -28,7 +28,6 @@ const People = React.createClass ({
 
   render: function () {
     return (
-      <div className='container-fluid' >
         <table className="table table-hover">
           <tbody>
           {this.state.memberData.map((member, index) => {
@@ -37,14 +36,15 @@ const People = React.createClass ({
                 <td className="active tableItems">
                   <img src={member.avatar_url}/>
                 </td>
-                <td className="active tableItems">{member.login}</td>
+                <td className="active tableItems">
+                  <Link key={member.login} to={'/users/' + member.login}>{member.login}</Link>
+                </td>
                 <td className="active tableItems">{member.type}</td>
               </tr>
             )
           })}
           </tbody>
         </table>
-      </div>
     )
   }
 

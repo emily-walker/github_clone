@@ -25,24 +25,22 @@ const Repos = React.createClass({
         console.log(error);
       })
   },
-
   render: function () {
-    var repoNodes = this.state.repoData.map(function (repo, index) {
-      return <div>
-        {repo.name}
-        {repo.description}
-        {repo.updated_at}
-        {repo.language}
-        {repo.stargazers_count}
-        {repo.private}
-        {repo.fork}
-        {repo.html_url}
-        </div>
-    });
     return (
-            <div>
-              {repoNodes}
-            </div>
+        <table className="table table-hover">
+          <tbody>
+          {this.state.repoData.map((repo, index) => {
+            return (
+              <tr className="active" key={index} onClick={console.log()}>
+                <td className="active tableItems">{repo.name}</td>
+                <td className="active tableItems">{repo.description}</td>
+                <td className="active tableItems">{repo.updated_at}</td>
+                <td className="active tableItems">{repo.forks}</td>
+              </tr>
+            )
+          })}
+          </tbody>
+        </table>
     )
   }
 

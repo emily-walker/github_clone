@@ -1,50 +1,218 @@
+.octicon {
+  display: inline-block;
+  vertical-align: text-top;
+  fill: currentColor;
+}
+
+.site-header {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-bottom: -1px;
+  background-color: #ffffff;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.075);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+a.nav-item {
+  color: #3c4146;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.secondary {
+  font-size: 13px;
+}
+
+.control:not(:last-child) {
+  margin-bottom: 0px;
+}
+
+.nav-btn {
+  margin-top: 2%;
+  margin-bottom: 2%;
+  font-weight: 500;
+}
+
+#sign-in-btn {
+  margin-right: 6px;
+  color: #333;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-color: #eee;
+  background-image: -webkit-linear-gradient(#fcfcfc, #eee);
+  border: 1px solid #d5d5d5;
+  border-radius: 3px;
+  -webkit-appearance: none;
+}
+
+#sign-in-btn:hover {
+  text-decoration: none;
+  background-color: #ddd;
+  background-image: -webkit-linear-gradient(#eee, #ddd);
+  background-image: linear-gradient(#eee, #ddd);
+  border-color: #ccc;
+}
+
+#sign-up-btn {
+  color: #fff;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.15);
+  background-color: #60b044;
+  background-image: -webkit-linear-gradient(#8add6d, #60b044);
+  background-image: linear-gradient(#8add6d, #60b044);
+  border-color: #5ca941;
+}
+
+#sign-up-btn:hover {
+  color: #fff;
+  background-color: #569e3d;
+  background-image: -webkit-linear-gradient(#79d858, #569e3d);
+  background-image: linear-gradient(#79d858, #569e3d);
+  border-color: #4a993e;
+}
+
+#input-label {
+  font-size: 12px;
+  color: #767676;
+  width: 110px;
+}
+
+#input {
+  width: 116.812px;
+}
+
+.left-end {
+  margin-left: 10px;
+}
+
+.right-end {
+  margin-right: 28%;
+}
+
+.nav-item:hover {
+  color: #000;
+  text-decoration: none;
+}
+
+.octicon {
+  display: inline-block;
+  vertical-align: text-top;
+  fill: currentColor;
+}
+
 .org-name {
   font-weight: normal;
-  color: #333; }
+  color: #333;
+}
+
+.orghead {
+  padding-top: 20px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  color: #666;
+}
+
+.info {
+  color: #666;
+  border-bottom: 1px solid #eee;
+}
 
 .org-header-meta {
+  display: inline-block;
   font-size: 12px;
+  padding-right: 18px;
   line-height: 1.5;
-  list-style: none; }
+  list-style: none;
+}
 
 h1 {
   font-size: 32px;
-  font-weight: 600; }
+  font-weight: 600;
+}
 
 .container {
   width: 980px;
   margin-right: auto;
-  margin-left: auto; }
+  margin-left: auto;
+}
 
 .container::before {
   display: table;
-  content: ""; }
+  content: "";
+}
 
 .container::after {
   display: table;
   clear: both;
-  content: ""; }
+  content: "";
+}
 
 .page-content {
-  padding-top: 20px; }
+  padding-top: 20px;
+}
+
+.nav.active {
+  margin-left: 40%;
+  margin-right: 0.01px;
+  background: #fff;
+  border-bottom: none;
+  border-top: 3px solid #d26911;
+  border-left: 1px solid #e5e5e5;
+  border-right: 1px solid #e5e5e5;
+}
+
+.tabs-wrapper, .orghead, .info {
+  background: #fafafa;
+}
+
+.tabs-wrapper {
+  border-bottom: 1px solid #e5e5e5;
+  position: relative;
+}
+
+.tab-pane, .table > tbody > tr > td.active {
+  background: #fff;
+}
+
+.tabs ul {
+  border-bottom: none;
+}
+
+#other-tab {
+  margin-left: 30px;
+}
+
+.tabs a {
+  width: 109.828px;
+  border-bottom: none;
+  padding: 8px 15px 11px;
+}
 
 .columns {
-  padding-top: 20px; }
+  padding-top: 20px;
+}
 
 .column {
   float: left;
   padding-right: 10px;
-  padding-left: 10px; }
+  padding-left: 10px;
+}
 
 img.octicon {
   margin-left: 28%;
   margin-top: 2%;
   height: 32px;
   width: 32px;
-  display: block; }
+  display: block;
+}
 
 .jumbotron {
-  background-color: black; }
+  background-color: black;
+}
 
 .jumbotron-home {
   height: 516px;
@@ -52,7 +220,8 @@ img.octicon {
   background-size: cover;
   background-position: bottom left;
   background-color: #000000 !important;
-  margin: 0px; }
+  margin: 0px;
+}
 
 .jumbotron::before {
   position: absolute;
@@ -64,17 +233,25 @@ img.octicon {
   content: "";
   background-color: rgba(0, 0, 0, 0.3);
   -webkit-transition: background-color 0.2s ease-out;
-  transition: background-color 0.2s ease-out; }
+  transition: background-color 0.2s ease-out;
+}
 
 .header-table {
   display: inline-block;
-  padding: 20px; }
+  padding: 20px;
+  vertical-align: middle;
+}
 
 #org-avatar {
+  vertical-align: middle;
   display: inline-block;
-  width: 100px; }
+  width: 100px;
+}
 
 .home-hero, .jumbotron, .jumbotron-followup-container, .featurette, .site-header, .site-subheader, .tile .container {
   font-family: Roboto, -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", Oxygen, Ubuntu, Cantarell, "Open Sans", sans-serif;
   font-size: 16px;
-  line-height: 1.4; }
+  line-height: 1.4;
+}
+
+/*# sourceMappingURL=styles.css.map */

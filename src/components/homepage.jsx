@@ -34,31 +34,34 @@ const Homepage = React.createClass({
     return (
       <div>
         <Navbar/>
-        <div className="container page-content">
-          <div>
+        <div className="info">
+          <div className="orghead page-content container">
             <img id="org-avatar" src={this.state.NCData.avatar_url}/>
             <div className="header-table">
               <h1 className="org-name">{this.state.NCData.name}</h1>
+              <div className="metadata">
               <span>
+                <span className="octicon octicon-location"/>
             <h3 className="org-header-meta">{this.state.NCData.location}</h3>
                 </span>
               <span>
-            <h3 className="org-header-meta">{this.state.NCData.blog}</h3>
+            <h3 className="org-header-meta not-first-metadata">{this.state.NCData.blog}</h3>
                 </span>
               <span>
-            <h3 className="org-header-meta">{this.state.NCData.email}</h3>
+            <h3 className="org-header-meta not-first-metadata">{this.state.NCData.email}</h3>
               </span>
+              </div>
             </div>
           </div>
-          <ul className="nav nav-tabs" role="tablist">
-            <li role="presentation" className="active">
-              <Link to="/">Repositories</Link>
-            </li>
-            <li role="presentation">
-              <Link to="/people">People</Link>
-            </li>
-          </ul>
-          <div className="tab-content container">
+          <div className="container">
+            <div className="tabs-wrapper">
+              <div className="tabs">
+                <ul>
+                  <li className="tab-nav"><Link to='/' className="nav active">Repositories</Link></li>
+                  <li className="tab-nav"><Link to='/people' id="other-tab">People</Link></li>
+                </ul>
+              </div>
+            </div>
             <div className="tab-pane active" id="repos">
               {this.props.children}
             </div>
@@ -67,10 +70,11 @@ const Homepage = React.createClass({
             </div>
           </div>
         </div>
-      </div>
-    )
-  }
+        </div>
+        
+        )
+        }
 
-});
+        });
 
-export default Homepage;
+        export default Homepage;

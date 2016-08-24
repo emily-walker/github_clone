@@ -1,0 +1,100 @@
+.table-list-item {
+  position: relative;
+  display: table-row;
+  list-style: none;
+}
+
+.member-list-avatar {
+  float: left;
+  margin-right: 15px;
+  height: 48px;
+  width: 48px;
+}
+
+.table-list {
+  display: table;
+  width: 100%;
+  color: #999;
+  table-layout: fixed;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.member-info {
+  width: 280px;
+  padding-left: 10px;
+  font-size: 14px;
+}
+
+.table-list-cell {
+  position: relative;
+  display: table-cell;
+  padding: 8px 10px;
+  font-size: 12px;
+  vertical-align: top;
+  border-top: 1px solid #eee;
+}
+
+.member-list-item .table-list-cell {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  vertical-align: middle;
+}
+
+.member-info-content {
+  margin-bottom: 5px;
+  overflow: hidden;
+}
+
+.follow-button {
+  padding: 3px 10px;
+  line-height: 20px !important;
+  height: 28px;
+  font-size: 12px;
+  width: 57.1719px;
+  font-weight: 600;
+  text-align: right;
+  background-color: #eee;
+  background-image: -webkit-linear-gradient(#fcfcfc, #eee);
+  background-image: linear-gradient(#fcfcfc, #eee);
+  border: 1px solid #d5d5d5;
+  display: inline-block;
+  color: #333;
+}
+
+.member-username {
+  display: block;
+  margin-top: 4px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+a {
+  color: #333;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #4078c0;
+}
+
+.member-list-item .member-link:hover .member-username {
+  color: #4078c0;
+}
+
+.member-meta {
+  color: #767676;
+  text-align: center;
+}
+
+.member-follow {
+  text-align: right;
+}
+
+
+.follow-button:hover, .follow-button:active{
+  text-decoration: none;
+  background-color: #ddd;
+  background-image: -webkit-linear-gradient(#eee, #ddd);
+  background-image: linear-gradient(#eee, #ddd);
+  border-color: #ccc;
+}

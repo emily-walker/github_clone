@@ -31,19 +31,23 @@ const Profile = React.createClass({
   render: function () {
     return (
 
-      <div>
+      <div className="page">
         <Navbar/>
         <div className="container">
           <div className="columns">
             <div className="column is-one-quarter">
-              <img src={this.state.profileData.avatar_url}/>
-              <h1>{this.state.profileData.name}</h1>
-              <h2>{this.state.profileData.login}</h2>
-              <h3>{this.state.profileData.location}</h3>
-              <h3>Joined on {this.state.profileData.created_at}</h3>
+              <img className="rounded-2"src={this.state.profileData.avatar_url}/>
+              <div className="full-name">{this.state.profileData.name}</div>
+              <div className="username">{this.state.profileData.login}</div>
+              <ul className="vcard-details border-top border-gray-light py-3">
+                <li className="vcard-detail py-1 css-truncate css-truncate-target">{this.state.profileData.location}</li>
+                <li className="vcard-detail py-1 css-truncate css-truncate-target">Joined on {this.state.profileData.created_at}</li>
+                </ul>
+              <div className="vcard-stats border-top border-bottom border-gray-light mb-3 py-3">
               <h3>{this.state.profileData.followers} Followers</h3>
               <h3>{this.state.profileData.following} Following</h3>
               <h3>{this.state.profileData.following} Following</h3>
+                </div>
             </div>
             <div className="column is-three-quarters">
               <ProfileTable user={this.props.params.username}/>

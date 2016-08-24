@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import axios from 'axios';
+import Sidebar from './sidebar';
 
 const Repos = React.createClass({
 
@@ -27,20 +28,20 @@ const Repos = React.createClass({
   },
   render: function () {
     return (
-        <table className="table table-hover">
-          <tbody>
+      <div>
+      <div className="repoTableComponent">
           {this.state.repoData.map((repo, index) => {
             return (
-              <tr className="active" key={index} onClick={console.log()}>
-                <td className="active tableItems">{repo.name}</td>
-                <td className="active tableItems">{repo.description}</td>
-                <td className="active tableItems">{repo.updated_at}</td>
-                <td className="active tableItems">{repo.forks}</td>
-              </tr>
+              <div key={index} className="repo-list-item">
+                <span className="repo-list-meta repo-name">{repo.name}</span>
+                <span className="repo-list-meta repo-description">{repo.description}</span>
+                <span className="repo-list-meta repo-date">Updated on {repo.updated_at}</span>
+              </div>
             )
           })}
-          </tbody>
-        </table>
+        </div >
+        <Sidebar className="repoTableComponent"/>
+        </div>
     )
   }
 

@@ -27,22 +27,20 @@ const PersonRepos= React.createClass({
   },
   render: function () {
     return (
-      <table className="table table-hover">
-        <tbody>
-        {this.state.personRepoData.map((repo, index) => {
-          return (
-            <tr className="active" key={index} onClick={console.log()}>
-              <td className="active tableItems">{repo.name}</td>
-              <td className="active tableItems">{repo.description}</td>
-              <td className="active tableItems">{repo.updated_at}</td>
-              <td className="active tableItems">{repo.forks}</td>
-            </tr>
-          )
-        })}
-        </tbody>
-      </table>
+        <div className="repoTableComponent">
+          {this.state.personRepoData.map((repo, index) => {
+            return (
+              <div key={index} className="repo-list-item">
+                <span className="repo-list-meta repo-name">{repo.name}</span>
+                <span className="repo-list-meta repo-description">{repo.description}</span>
+                <span className="repo-list-meta repo-date">Updated on {repo.updated_at}</span>
+              </div>
+            )
+          })}
+        </div>
     )
   }
+
 
 });
 

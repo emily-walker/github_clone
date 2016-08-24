@@ -1,0 +1,73 @@
+.full-name {
+  font-size: 26px;
+  line-height: 30px;
+  font-weight: 600;
+  color: #333;
+}
+
+.username {
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 24px;
+  color: #666;
+}
+
+.vcard-details {
+  list-style: none;
+}
+
+.py-3 {
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.border-gray-light {
+  border-color: #eee;
+}
+
+.rounded-2 {
+  border-radius: 6px !important;
+}
+
+.border-top {
+  border-top: 1px #e5e5e5 solid;
+}
+
+.vcard-details .css-truncate.css-truncate-target {
+  width: 100%;
+  max-width: 100%;
+}
+
+.css-truncate.css-truncate-target, .css-truncate .css-truncate-target {
+  display: inline-block;
+  max-width: 125px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  vertical-align: top;
+}
+
+.vcard-stat {
+  float: left;
+  width: 33.333%;
+  font-size: 11px;
+  text-transform: capitalize;
+}
+
+.vcard-stat-count {
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 1;
+  color: #4078c0;
+  text-decoration: none;
+}
+
+.nav-tabs > li > a {
+  color: #333;
+  background-color: #fff;
+  border-color: #ddd;
+  border-radius: 3px 3px 0 0;
+  border-bottom: none;
+  min-height: 0px;
+}

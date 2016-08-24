@@ -1,9 +1,9 @@
 const React = require('react');
 import axios from 'axios';
-import { Router, Route, Link } from 'react-router'
+import {Router, Route, Link} from 'react-router'
 
 
-const People = React.createClass ({
+const People = React.createClass({
   getInitialState: function () {
     return {
       loaded: false,
@@ -21,30 +21,32 @@ const People = React.createClass ({
         var memberData = response.data;
         this.setState({memberData: memberData});
       }.bind(this))
-      .catch(function(error) {
+      .catch(function (error) {
         console.log(error);
       })
   },
 
   render: function () {
     return (
-        <table className="table table-hover">
-          <tbody>
+      <div>
+        <ul className="table-list">
           {this.state.memberData.map((member, index) => {
             return (
-              <tr className="active" key={index} onClick={console.log()}>
-                <td className="active tableItems">
-                  <img src={member.avatar_url}/>
-                </td>
-                <td className="active tableItems">
-                  <Link key={member.login} to={'/users/' + member.login}>{member.login}</Link>
-                </td>
-                <td className="active tableItems">{member.type}</td>
-              </tr>
+              <li key={index} className="table-list-item">
+                <div className="table-list-cell member-info">
+                  <img className="avatar member-list-avatar" src={member.avatar_url}/>
+                  <div className="member-info-content member-username">
+                    <Link key={member.login} to={'/users/' + member.login}>{member.login}</Link>
+                  </div>
+                </div>
+                <div className="member-follow member-meta table-list-cell">
+                <button type="button" className="btn follow-button">Follow</button>
+                  </div>
+              </li>
             )
           })}
-          </tbody>
-        </table>
+        </ul>
+      </div>
     )
   }
 

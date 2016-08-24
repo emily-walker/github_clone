@@ -1,0 +1,36 @@
+.repo-list-meta {
+  display: block;
+  margin-top: 8px;
+  margin-bottom: 0;
+  font-size: 13px;
+  color: #888;
+}
+
+.repo-name {
+  color: #4078c0;
+  text-decoration: none;
+  font-size: 20px;
+  line-height: 1.2;
+  font-weight: 600;
+}
+
+.repo-description {
+  max-width: 550px;
+  margin-top: 8px;
+  margin-bottom: 0;
+  font-size: 14px;
+  color: #666;
+}
+
+.repo-name:hover, .repo-name:active {
+  text-decoration: underline;
+}
+
+.repo-list-item {
+  position: relative;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  list-style: none;
+  border-bottom: 1px solid #eee;
+  background: #fff;
+}

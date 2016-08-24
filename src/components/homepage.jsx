@@ -1,10 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import axios from 'axios';
+import { Router, Route, Link } from 'react-router'
 import Navbar from './homepageComponents/navbar';
-import Repos from './frontPageTableComponents/repos';
-import People from './frontPageTableComponents/people'
-import {Link} from 'react-router';
+import Footer from './homepageComponents/footer';
 
 const Homepage = React.createClass({
 
@@ -32,7 +31,7 @@ const Homepage = React.createClass({
 
   render: function () {
     return (
-      <div>
+      <div className="page">
         <Navbar/>
         <div className="info">
           <div className="orghead page-content container">
@@ -41,7 +40,7 @@ const Homepage = React.createClass({
               <h1 className="org-name">{this.state.NCData.name}</h1>
               <div className="metadata">
               <span>
-                <span className="octicon octicon-location"/>
+                <span className="octicon octicon-location"></span>
             <h3 className="org-header-meta">{this.state.NCData.location}</h3>
                 </span>
               <span>
@@ -58,23 +57,25 @@ const Homepage = React.createClass({
               <div className="tabs">
                 <ul>
                   <li className="tab-nav"><Link to='/' className="nav active">Repositories</Link></li>
-                  <li className="tab-nav"><Link to='/people' id="other-tab">People</Link></li>
+                  <li className="tab-nav"><Link to='/people'>People</Link></li>
                 </ul>
               </div>
             </div>
-            <div className="tab-pane active" id="repos">
-              {this.props.children}
-            </div>
-            <div className="tab-pane" id="people">
-
-            </div>
           </div>
         </div>
+        <div className="homepage-table">
+          <div className="tab-pane active" id="repos">
+            {this.props.children}
+          </div>
+          <div className="tab-pane" id="people">
+          </div>
         </div>
-        
-        )
-        }
+        <Footer/>
+      </div>
 
-        });
+    )
+  }
 
-        export default Homepage;
+});
+
+export default Homepage;
